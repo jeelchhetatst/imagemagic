@@ -13,6 +13,8 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
+    { href: "/privacy", label: "Privacy" },
+    { href: "/terms", label: "Terms" },
     { href: "/disclaimer", label: "Disclaimer" },
   ];
 
