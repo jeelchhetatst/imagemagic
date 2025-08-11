@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Image } from "lucide-react";
+import { Menu } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Header() {
@@ -45,7 +45,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <Link href="/">
             <div className="flex items-center cursor-pointer">
-              <Image className="text-primary text-2xl mr-3 h-6 w-6" />
+              <img 
+                src="/logo.svg" 
+                alt="PNGConvert Logo" 
+                className="h-8 w-8 mr-3" 
+              />
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">PNGConvert</h1>
             </div>
           </Link>
