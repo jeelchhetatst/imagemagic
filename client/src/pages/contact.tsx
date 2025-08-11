@@ -176,10 +176,10 @@ export default function Contact() {
           <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
             <p className="text-gray-600 dark:text-gray-300 mb-2">You can also reach us directly at:</p>
             <a
-              href="mailto:support@jpg2png-clone.com"
+              href="mailto:support@pngconvert.com"
               className="text-primary hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
             >
-              support@jpg2png-clone.com
+              support@pngconvert.com
             </a>
           </div>
         </CardContent>

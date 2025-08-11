@@ -46,7 +46,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center cursor-pointer">
               <Image className="text-primary text-2xl mr-3 h-6 w-6" />
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">JPG2PNG</h1>
+              <h1 className="text-xl font-bold text-gray-900 dark:text-white">PNGConvert</h1>
             </div>
           </Link>
 

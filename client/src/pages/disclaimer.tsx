@@ -76,7 +76,7 @@ export default function Disclaimer() {
         
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Limitation of Liability</h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6">
-          In no event shall JPG2PNG, its operators, or contributors be liable for any direct, 
+          In no event shall PNGConvert, its operators, or contributors be liable for any direct, 
           indirect, incidental, special, or consequential damages arising from the use of this 
           service, including but not limited to:
         </p>
@@ -97,8 +97,8 @@ export default function Disclaimer() {
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Contact Information</h2>
         <p className="text-gray-600 dark:text-gray-300">
           If you have questions about this disclaimer, please contact us at{" "}
-          <a href="mailto:legal@jpg2png-clone.com" className="text-primary hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300">
-            legal@jpg2png-clone.com
+          <a href="mailto:legal@pngconvert.com" className="text-primary hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300">
+            legal@pngconvert.com
           </a>
         </p>
       </div>

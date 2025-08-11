@@ -38,7 +38,7 @@ function Router() {
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="jpg2png-theme">
+    <ThemeProvider defaultTheme="light" storageKey="pngconvert-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />

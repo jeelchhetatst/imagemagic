@@ -1,11 +1,11 @@
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">About JPG2PNG</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">About PNGConvert</h1>
       
       <div className="prose prose-gray dark:prose-invert max-w-none">
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-          JPG2PNG is a free, fast, and secure online image converter that helps you transform 
+          PNGConvert is a free, fast, and secure online image converter that helps you transform 
           various image formats to PNG with just a few clicks.
         </p>
         

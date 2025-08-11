@@ -1,8 +1,8 @@
-# JPG2PNG - Free Online Image Converter
+# PNGConvert - Free Online Image Converter
 
 ## Overview
 
-JPG2PNG is a production-ready, full-stack image conversion web application that allows users to convert various image formats (JPG, JPEG, WEBP, HEIC, GIF, BMP, TIFF) to PNG format. The application provides a free, secure, and user-friendly service with automatic file cleanup, rate limiting, and privacy-first design principles.
+PNGConvert is a production-ready, full-stack image conversion web application that allows users to convert various image formats (JPG, JPEG, WEBP, HEIC, GIF, BMP, TIFF) to PNG format. The application provides a free, secure, and user-friendly service with automatic file cleanup, rate limiting, and privacy-first design principles.
 
 ## User Preferences
 

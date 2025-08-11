@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <Image className="text-primary text-2xl mr-3 h-6 w-6" />
-              <h3 className="text-xl font-bold">JPG2PNG</h3>
+              <h3 className="text-xl font-bold">PNGConvert</h3>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
               Free, fast, and secure image conversion. Transform your images to PNG format 
@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 JPG2PNG. All rights reserved. Made with ❤️ for the web.</p>
+          <p>&copy; 2024 PNGConvert. All rights reserved. Made with ❤️ for the web.</p>
           
           {/* AdSense Placeholder */}
           <div className="mt-4 p-4 bg-gray-800 dark:bg-gray-900 rounded-lg border-2 border-dashed border-gray-700 dark:border-gray-600">
