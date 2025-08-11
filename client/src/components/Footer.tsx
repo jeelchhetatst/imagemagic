@@ -3,7 +3,7 @@ import { Image } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
@@ -52,6 +52,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/disclaimer">
+                  <span className="hover:text-white transition-colors cursor-pointer">Disclaimer</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/adsense-info">
                   <span className="hover:text-white transition-colors cursor-pointer">AdSense Info</span>
                 </Link>
@@ -64,12 +69,12 @@ export default function Footer() {
           <p>&copy; 2024 JPG2PNG. All rights reserved. Made with ❤️ for the web.</p>
           
           {/* AdSense Placeholder */}
-          <div className="mt-4 p-4 bg-gray-800 rounded-lg border-2 border-dashed border-gray-700">
-            <p className="text-sm text-gray-500">
+          <div className="mt-4 p-4 bg-gray-800 dark:bg-gray-900 rounded-lg border-2 border-dashed border-gray-700 dark:border-gray-600">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               <span className="mr-2">📢</span>
               Google AdSense ads will appear here after approval
             </p>
-            <p className="text-xs text-gray-600 mt-1">
+            <p className="text-xs text-gray-600 dark:text-gray-500 mt-1">
               Add your AdSense code in the HTML head section
             </p>
           </div>

@@ -80,11 +80,11 @@ export default function Contact() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">Contact Us</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Contact Us</h1>
       
       <Card>
         <CardContent className="p-8">
-          <p className="text-gray-600 mb-8 text-center">
+          <p className="text-gray-600 dark:text-gray-300 mb-8 text-center">
             Have questions, feedback, or need support? We'd love to hear from you.
           </p>
           
@@ -152,12 +152,12 @@ export default function Contact() {
             </div>
             
             {/* CAPTCHA Placeholder */}
-            <div className="bg-gray-100 rounded-lg p-4 border-2 border-dashed border-gray-300">
-              <p className="text-gray-600 text-sm text-center">
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 border-2 border-dashed border-gray-300 dark:border-gray-600">
+              <p className="text-gray-600 dark:text-gray-300 text-sm text-center">
                 <Shield className="inline mr-2 h-4 w-4" />
                 CAPTCHA verification will appear here in production
               </p>
-              <p className="text-xs text-gray-500 text-center mt-1">
+              <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-1">
                 Add reCAPTCHA site key to environment variables
               </p>
             </div>
@@ -173,11 +173,11 @@ export default function Contact() {
             </Button>
           </form>
           
-          <div className="mt-8 pt-8 border-t border-gray-200 text-center">
-            <p className="text-gray-600 mb-2">You can also reach us directly at:</p>
+          <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
+            <p className="text-gray-600 dark:text-gray-300 mb-2">You can also reach us directly at:</p>
             <a
               href="mailto:support@jpg2png-clone.com"
-              className="text-primary hover:text-blue-600 font-medium"
+              className="text-primary hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
             >
               support@jpg2png-clone.com
             </a>

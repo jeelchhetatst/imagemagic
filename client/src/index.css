@@ -72,6 +72,10 @@
     background: linear-gradient(135deg, hsl(214, 100%, 97%) 0%, hsl(0, 0%, 100%) 100%);
   }
   
+  .dark .hero-gradient {
+    background: linear-gradient(135deg, hsl(217, 33%, 17%) 0%, hsl(222, 84%, 5%) 100%);
+  }
+  
   .upload-area {
     transition: all 0.2s ease-in-out;
   }
@@ -85,6 +89,10 @@
     border-color: hsl(214.7, 87.8%, 58.8%);
     background-color: hsl(214, 100%, 97%);
     transform: scale(1.02);
+  }
+  
+  .dark .upload-area.drag-over {
+    background-color: hsl(214, 100%, 15%);
   }
   
   .feature-icon {
@@ -101,6 +109,18 @@
   
   .feature-icon.mobile {
     @apply bg-purple-100 text-purple-600;
+  }
+  
+  .dark .feature-icon.secure {
+    @apply bg-green-900 text-green-400;
+  }
+  
+  .dark .feature-icon.fast {
+    @apply bg-blue-900 text-blue-400;
+  }
+  
+  .dark .feature-icon.mobile {
+    @apply bg-purple-900 text-purple-400;
   }
 }
 

@@ -1,15 +1,15 @@
 export default function Terms() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Terms of Service</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Terms of Service</h1>
       
-      <div className="prose prose-gray max-w-none">
-        <p className="text-gray-600 mb-6">
+      <div className="prose prose-gray dark:prose-invert max-w-none">
+        <p className="text-gray-600 dark:text-gray-300 mb-6">
           <strong>Last updated:</strong> December 2024
         </p>
         
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
-        <p className="text-gray-600 mb-6">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Acceptance of Terms</h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-6">
           By using our image conversion service, you agree to these terms of service. 
           If you disagree with any part of these terms, please do not use our service.
         </p>

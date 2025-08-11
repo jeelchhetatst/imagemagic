@@ -143,8 +143,8 @@ export default function UploadArea() {
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div
-        className={`upload-area bg-white rounded-2xl shadow-lg p-8 border-2 border-dashed transition-all duration-200 ${
-          isDragOver ? 'drag-over border-primary bg-blue-50' : 'border-gray-300'
+        className={`upload-area bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border-2 border-dashed transition-all duration-200 ${
+          isDragOver ? 'drag-over border-primary bg-blue-50 dark:bg-blue-900/20' : 'border-gray-300 dark:border-gray-600'
         }`}
         onDrop={handleDrop}
         onDragOver={handleDragOver}
@@ -155,13 +155,13 @@ export default function UploadArea() {
             <div className="space-y-4">
               <FileImage className="h-16 w-16 text-primary mx-auto" />
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   Ready to Convert
                 </h3>
-                <p className="text-gray-600 mb-2">
+                <p className="text-gray-600 dark:text-gray-300 mb-2">
                   {selectedFile.name}
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   Size: {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                 </p>
               </div>
@@ -192,11 +192,11 @@ export default function UploadArea() {
             </div>
           ) : (
             <>
-              <Upload className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              <Upload className="h-16 w-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                 Drop your image here
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 or click to browse files
               </p>
               
@@ -216,7 +216,7 @@ export default function UploadArea() {
                 Select Image
               </Button>
               
-              <p className="text-sm text-gray-500 mt-4">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
                 Supports: JPG, JPEG, WEBP, HEIC, GIF, BMP, TIFF • Max size: 15MB
               </p>
             </>

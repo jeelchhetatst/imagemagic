@@ -29,8 +29,8 @@ export default function FeatureIcons() {
           <div className={feature.colorClass}>
             <feature.icon className="h-8 w-8" />
           </div>
-          <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-          <p className="text-gray-600 text-sm">{feature.description}</p>
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+          <p className="text-gray-600 dark:text-gray-300 text-sm">{feature.description}</p>
         </div>
       ))}
     </div>

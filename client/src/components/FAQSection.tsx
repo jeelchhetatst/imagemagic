@@ -39,38 +39,38 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 dark:text-gray-300">
             Everything you need to know about our image converter
           </p>
         </div>
         
         <div className="space-y-4">
           {faqItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden">
+            <Card key={index} className="overflow-hidden bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
               <CardContent className="p-0">
                 <Button
                   variant="ghost"
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors h-auto"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors h-auto"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h3 className="font-semibold text-gray-900 text-left">
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-left">
                     {item.question}
                   </h3>
                   {openIndex === index ? (
-                    <ChevronUp className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                    <ChevronUp className="h-5 w-5 text-gray-400 dark:text-gray-500 flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                    <ChevronDown className="h-5 w-5 text-gray-400 dark:text-gray-500 flex-shrink-0" />
                   )}
                 </Button>
                 
                 {openIndex === index && (
-                  <div className="px-6 pb-4 text-gray-600 animate-slide-up">
+                  <div className="px-6 pb-4 text-gray-600 dark:text-gray-300 animate-slide-up">
                     {item.answer}
                   </div>
                 )}
