@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { Image } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,7 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <Image className="text-primary text-2xl mr-3 h-6 w-6" />
+              <img 
+                src="/logo.png" 
+                alt="PNGConvert Logo" 
+                className="h-6 w-6 mr-3" 
+              />
               <h3 className="text-xl font-bold">PNGConvert</h3>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">

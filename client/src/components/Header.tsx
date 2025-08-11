@@ -46,7 +46,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center cursor-pointer">
               <img 
-                src="/logo.svg" 
+                src="/logo.png" 
                 alt="PNGConvert Logo" 
                 className="h-8 w-8 mr-3" 
               />
