@@ -1,0 +1,71 @@
+Create a complete, production-ready full-stack website called "jpg2png-clone" that replicates the core functionality of jpg2png.com: upload an image (jpg, jpeg, webp, heic, gif, etc.), convert it to PNG, let the user download the converted file, and provide a small, clean UI with instructions and pages required for Adsense approval (privacy policy, terms, contact, about). This should be fully runnable on Replit (Node.js environment). Do not ask me follow-up questions — generate all files and code.
+
+Requirements and stack:
+- Use Next.js (latest stable) with the App Router for pages and server API routes.
+- Use Tailwind CSS for styling (clean, responsive, minimal, mobile-first).
+- Backend image conversion: use `sharp` as the primary library and implement `jimp` as a fallback if `sharp` is not available. Include code that detects if `sharp` fails and falls back to `jimp`.
+- File upload: support drag-and-drop and file input, show file preview and conversion progress, validate file types and size (max 15MB).
+- Store converted files in a temporary server folder and auto-delete files older than 1 hour.
+- Security & abuse prevention:
+  - Rate limit conversion endpoint per IP (e.g., 50 conversions/hour).
+  - Add basic CAPTCHA integration placeholder (reCAPTCHA v2/v3) with clear comments where to put site/secret keys.
+  - Validate and sanitize all inputs. Enforce strict content-type checks.
+- Accessibility & SEO:
+  - Proper HTML semantics, alt attributes, and visible instructions.
+  - A usable sitemap.xml and robots.txt.
+  - Meta tags for title/description, Open Graph, and Twitter cards for the homepage.
+- AdSense & policy readiness:
+  - Add `/privacy`, `/terms`, and `/adsense-info` pages. Generate a clear Privacy Policy and Terms of Service tailored to an image conversion service (explain uploaded files are temporarily stored and deleted).
+  - Add a `README.md` and an `ADSENSE_CHECKLIST.md` listing concrete things to do before applying (unique content pages, privacy policy, contact page, site ownership verification, sufficient content, valid email/contact form, no copyrighted content, site load performance, and mobile friendliness). Do not promise approval.
+  - Include an `ads.txt` placeholder and instructions to add publisher ID.
+- UX details:
+  - Homepage with hero, upload area, example images, the conversion button, and a small FAQ section (five common Q&A).
+  - Post-conversion page shows a download button and a one-click copy link button.
+  - Small footer with links to Privacy, Terms, About, Contact.
+- Analytics & monitoring:
+  - Add placeholder for Google Analytics / GA4 and simple server logging for conversion counts.
+- Dev & deployment:
+  - Provide `package.json` with scripts: `dev`, `build`, `start`, `lint`, `format`.
+  - Provide `replit.nix` or instructions in README for Replit if needed (or a single-line note how to run on Replit: `npm i && npm run dev`).
+  - Include a `.replit` file that boots the Next.js dev server when run on Replit.
+- Tests & CI:
+  - Include a basic test file (Jest) that tests the conversion API route responds 200 for a small sample image.
+- Quality & comments:
+  - All code must be well-commented, especially where secrets (captcha, adsense ID) must be inserted.
+  - Use environment variables for keys and secrets (`.env.example` provided).
+  - Add server-side error handling and meaningful client error messages.
+- Files to create and brief content (generate these files):
+  - `package.json`
+  - `next.config.js`
+  - `tailwind.config.js`
+  - `postcss.config.js`
+  - `pages/_app.js` or App Router equivalent
+  - `app/page.jsx` (home)
+  - `app/privacy/page.jsx`, `app/terms/page.jsx`, `app/about/page.jsx`, `app/contact/page.jsx`, `app/adsense-info/page.jsx`, `app/faq/page.jsx`
+  - `app/sitemap.xml.js` (or static sitemap) and `public/robots.txt`, `public/ads.txt`
+  - `components/UploadArea.jsx`, `components/Header.jsx`, `components/Footer.jsx`, `components/ConversionResult.jsx`
+  - `lib/convert.js` — conversion logic using `sharp` with `jimp` fallback; clean up temporary files.
+  - `pages/api/convert.js` (or app/api route) — accepts multipart/form-data, returns downloadable URL or file stream; implements rate limiting, size/type checks.
+  - `lib/rateLimiter.js` — simple in-memory rate limiter with comments recommending Redis for production.
+  - `scripts/cleanup.js` — script to delete old temp files; set as a cron placeholder in README.
+  - `README.md` — setup and deploy steps, Replit-specific notes, how to set env vars, where to place Ads code, and the ADSENSE_CHECKLIST.md
+  - `ADSENSE_CHECKLIST.md` — concrete checklist of items required to maximize chances for approval (see above).
+  - `.env.example`
+  - `.replit` file
+  - `public/sample.jpg`, `public/sample.webp` (small example images)
+  - `__tests__/api.convert.test.js` — basic Jest test
+- UX copy & content:
+  - Write concise, helpful copy for homepage, FAQ (5 Qs), Privacy Policy, and Terms of Service. Make the language clear and professional.
+- Size & performance:
+  - Image conversions should stream data and avoid loading entire files into memory where possible; provide buffer fallback if necessary.
+  - Add caching headers for converted files and instruct to use a CDN in production.
+- Final step:
+  - Include a short `DEPLOY_AND_ADSENSE.md` file with step-by-step actions to deploy on Replit and prepare for Adsense: verify domain ownership, place privacy policy, ensure contact form works, wait until site has several content pages and organic traffic, then apply, plus where to paste ads.txt and ad code.
+- Non-functional constraints:
+  - Do not include any real Adsense publisher IDs, real captcha keys, or other credentials. Use placeholders and clear instructions where to insert them.
+  - Do not attempt to auto-apply for Adsense within the app.
+- Output: return the full project tree and all file contents (complete code) so I can run it immediately on Replit. Ensure no interactive prompts are needed after creation.
+
+Make the project professional and minimal (not a design-heavy clone), with production-ready structure and clear comments on customization points. Prioritize reliability, security, and AdSense policy readiness.
+
+End of prompt.
