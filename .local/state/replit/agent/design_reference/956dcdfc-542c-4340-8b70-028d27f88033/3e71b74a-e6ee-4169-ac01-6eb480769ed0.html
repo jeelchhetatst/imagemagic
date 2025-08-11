@@ -1,0 +1,544 @@
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG2PNG - Free Online Image Converter | Convert Images to PNG Format</title>
+    <meta name="description" content="Convert JPG, JPEG, WEBP, HEIC, GIF and other image formats to PNG for free. Fast, secure, and easy-to-use online image converter.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="JPG2PNG - Free Online Image Converter">
+    <meta property="og:description" content="Convert JPG, JPEG, WEBP, HEIC, GIF and other image formats to PNG for free. Fast, secure, and easy-to-use online image converter.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jpg2png-clone.replit.app">
+    <meta property="og:image" content="https://jpg2png-clone.replit.app/og-image.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JPG2PNG - Free Online Image Converter">
+    <meta name="twitter:description" content="Convert images to PNG format for free">
+    <meta name="twitter:image" content="https://jpg2png-clone.replit.app/og-image.png">
+    
+    <link rel="canonical" href="https://jpg2png-clone.replit.app">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#64748B',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        error: '#EF4444'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="h-full bg-gray-50 font-sans" data-mock="true">
+    <!-- @COMPONENT: Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-image text-primary text-2xl mr-3" data-mock="true"></i>
+                    <h1 class="text-xl font-bold text-gray-900" data-mock="true">JPG2PNG</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-primary transition-colors font-medium" data-mock="true">Home</a>
+                    <a href="#faq" class="text-gray-600 hover:text-primary transition-colors" data-mock="true">FAQ</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary transition-colors" data-mock="true">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition-colors" data-mock="true">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-900 p-2" data-mock="true" data-event="click:toggleMobileMenu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <main class="min-h-screen">
+        <!-- @COMPONENT: Hero Section -->
+        <section id="home" class="bg-gradient-to-b from-blue-50 to-white py-12 lg:py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6" data-mock="true">
+                    Convert Images to PNG 
+                    <span class="text-primary">for Free</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto" data-mock="true">
+                    Transform JPG, JPEG, WEBP, HEIC, GIF and other formats to PNG instantly. 
+                    No watermarks, no registration required.
+                </p>
+                
+                <!-- @COMPONENT: Upload Area -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12 border-2 border-dashed border-gray-300 hover:border-primary transition-colors" 
+                     data-mock="true" data-implementation="Drag and drop functionality with file validation">
+                    <div class="text-center">
+                        <i class="fas fa-cloud-upload-alt text-5xl text-gray-400 mb-4" data-mock="true"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2" data-mock="true">Drop your image here</h3>
+                        <p class="text-gray-600 mb-6" data-mock="true">or click to browse files</p>
+                        
+                        <input type="file" id="fileInput" class="hidden" accept=".jpg,.jpeg,.png,.webp,.heic,.gif" 
+                               data-mock="true" data-implementation="File input with type validation">
+                        <label for="fileInput" class="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 transition-colors cursor-pointer" data-mock="true">
+                            <i class="fas fa-folder-open mr-2"></i>
+                            Select Image
+                        </label>
+                        
+                        <p class="text-sm text-gray-500 mt-4" data-mock="true">
+                            Supports: JPG, JPEG, WEBP, HEIC, GIF • Max size: 15MB
+                        </p>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: Upload Area -->
+
+                <!-- @COMPONENT: Feature Icons -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-center" data-mock="true">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Secure & Private</h3>
+                        <p class="text-gray-600 text-sm">Files are automatically deleted after 1 hour</p>
+                    </div>
+                    <div class="text-center" data-mock="true">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Lightning Fast</h3>
+                        <p class="text-gray-600 text-sm">Convert images in seconds with high quality</p>
+                    </div>
+                    <div class="text-center" data-mock="true">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mobile-alt text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Mobile Friendly</h3>
+                        <p class="text-gray-600 text-sm">Works perfectly on all devices</p>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: Feature Icons -->
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Hero Section -->
+
+        <!-- @COMPONENT: Conversion Result Section (Hidden by default) -->
+        <section id="conversion-result" class="py-16 bg-white hidden" data-mock="true" data-implementation="Show after successful conversion">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-green-50 rounded-2xl p-8 border border-green-200">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check text-2xl text-green-600"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4" data-mock="true">Conversion Complete!</h2>
+                    <p class="text-gray-600 mb-8" data-mock="true">Your image has been successfully converted to PNG format.</p>
+                    
+                    <!-- @COMPONENT: Result Actions -->
+                    <div class="space-y-4">
+                        <button class="w-full bg-primary text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-600 transition-colors flex items-center justify-center" 
+                                data-mock="true" data-event="click:downloadFile">
+                            <i class="fas fa-download mr-2"></i>
+                            Download PNG File
+                        </button>
+                        
+                        <div class="flex items-center space-x-2 bg-gray-50 rounded-lg p-3">
+                            <input type="text" value="https://jpg2png-clone.replit.app/download/abc123" 
+                                   class="flex-1 bg-transparent text-sm text-gray-600 border-none focus:outline-none" 
+                                   readonly data-mock="true" data-bind="downloadUrl">
+                            <button class="text-primary hover:text-blue-600 px-3 py-1 text-sm font-medium" 
+                                    data-mock="true" data-event="click:copyLink">
+                                <i class="fas fa-copy mr-1"></i>
+                                Copy Link
+                            </button>
+                        </div>
+                        
+                        <button class="text-gray-600 hover:text-gray-900 font-medium" 
+                                data-mock="true" data-event="click:convertAnother">
+                            Convert Another Image
+                        </button>
+                    </div>
+                    <!-- @END_COMPONENT: Result Actions -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Conversion Result Section -->
+
+        <!-- @COMPONENT: FAQ Section -->
+        <section id="faq" class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4" data-mock="true">Frequently Asked Questions</h2>
+                    <p class="text-xl text-gray-600" data-mock="true">Everything you need to know about our image converter</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-mock="true">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                data-event="click:toggleFaq" data-implementation="Toggle FAQ visibility">
+                            <h3 class="font-semibold text-gray-900">Is it free to convert images?</h3>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="px-6 pb-4 text-gray-600" data-mock="true">
+                            Yes, our image converter is completely free to use. You can convert up to 50 images per hour with no watermarks or hidden fees.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-mock="true">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                data-event="click:toggleFaq">
+                            <h3 class="font-semibold text-gray-900">What image formats do you support?</h3>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="px-6 pb-4 text-gray-600 hidden" data-mock="true">
+                            We support JPG, JPEG, WEBP, HEIC, GIF, and many other common image formats. All files are converted to high-quality PNG format.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-mock="true">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                data-event="click:toggleFaq">
+                            <h3 class="font-semibold text-gray-900">Are my files secure?</h3>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="px-6 pb-4 text-gray-600 hidden" data-mock="true">
+                            Absolutely. All uploaded files are automatically deleted from our servers after 1 hour. We don't store or share your images with anyone.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-mock="true">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                data-event="click:toggleFaq">
+                            <h3 class="font-semibold text-gray-900">What's the maximum file size?</h3>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="px-6 pb-4 text-gray-600 hidden" data-mock="true">
+                            You can upload files up to 15MB in size. This covers most standard photos and images for personal or business use.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-mock="true">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                data-event="click:toggleFaq">
+                            <h3 class="font-semibold text-gray-900">Do I need to create an account?</h3>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="px-6 pb-4 text-gray-600 hidden" data-mock="true">
+                            No account required! Simply upload your image and download the converted PNG file immediately. It's that simple.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: FAQ Section -->
+
+        <!-- @COMPONENT: Privacy Policy Page (Modal/Separate Page View) -->
+        <div id="privacy-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8" data-mock="true">Privacy Policy</h1>
+                <div class="prose prose-gray max-w-none" data-mock="true">
+                    <p class="text-gray-600 mb-6">Last updated: <span data-bind="lastUpdated">December 2024</span></p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
+                    <p class="text-gray-600 mb-6">
+                        We collect minimal information to provide our image conversion service. When you upload an image, 
+                        we temporarily store it on our servers for processing. We also collect basic analytics data to 
+                        improve our service.
+                    </p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">How We Use Your Information</h2>
+                    <p class="text-gray-600 mb-6">
+                        Your uploaded images are used solely for conversion purposes. All files are automatically 
+                        deleted from our servers within 1 hour of upload. We never share, sell, or distribute your images.
+                    </p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Data Security</h2>
+                    <p class="text-gray-600 mb-6">
+                        We implement industry-standard security measures to protect your data during transmission 
+                        and temporary storage. All file transfers use encrypted connections.
+                    </p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+                    <p class="text-gray-600">
+                        If you have questions about this privacy policy, please contact us at 
+                        <a href="mailto:privacy@jpg2png-clone.com" class="text-primary hover:text-blue-600">
+                            privacy@jpg2png-clone.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: Privacy Policy Page -->
+
+        <!-- @COMPONENT: Terms of Service Page -->
+        <div id="terms-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8" data-mock="true">Terms of Service</h1>
+                <div class="prose prose-gray max-w-none" data-mock="true">
+                    <p class="text-gray-600 mb-6">Last updated: <span data-bind="lastUpdated">December 2024</span></p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
+                    <p class="text-gray-600 mb-6">
+                        By using our image conversion service, you agree to these terms of service. 
+                        If you disagree with any part of these terms, please do not use our service.
+                    </p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Service Description</h2>
+                    <p class="text-gray-600 mb-6">
+                        JPG2PNG provides free online image conversion services. We convert various image formats 
+                        to PNG format. Files are temporarily stored for processing and automatically deleted within 1 hour.
+                    </p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">User Responsibilities</h2>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>You may only upload images you own or have permission to convert</li>
+                        <li>Do not upload copyrighted content without proper authorization</li>
+                        <li>Respect our rate limits (50 conversions per hour per IP address)</li>
+                        <li>Do not attempt to circumvent security measures</li>
+                    </ul>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Limitation of Liability</h2>
+                    <p class="text-gray-600 mb-6">
+                        Our service is provided "as is" without warranties. We are not liable for any loss of data, 
+                        conversion errors, or service interruptions.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: Terms of Service Page -->
+
+        <!-- @COMPONENT: About Page -->
+        <div id="about-page" class="hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8" data-mock="true">About JPG2PNG</h1>
+                <div class="prose prose-gray max-w-none" data-mock="true">
+                    <p class="text-xl text-gray-600 mb-8">
+                        JPG2PNG is a free, fast, and secure online image converter that helps you transform 
+                        various image formats to PNG with just a few clicks.
+                    </p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Our Mission</h2>
+                    <p class="text-gray-600 mb-6">
+                        We believe that image conversion should be simple, fast, and accessible to everyone. 
+                        Our goal is to provide a reliable tool that respects your privacy while delivering 
+                        high-quality results.
+                    </p>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Why Choose JPG2PNG?</h2>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li><strong>Free Forever:</strong> No hidden fees or premium upgrades</li>
+                        <li><strong>Privacy First:</strong> Files deleted automatically after 1 hour</li>
+                        <li><strong>High Quality:</strong> Professional-grade conversion algorithms</li>
+                        <li><strong>Fast Processing:</strong> Most conversions complete in seconds</li>
+                        <li><strong>No Registration:</strong> Use immediately without creating accounts</li>
+                    </ul>
+                    
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Supported Formats</h2>
+                    <p class="text-gray-600 mb-6">
+                        We support conversion from JPG, JPEG, WEBP, HEIC, GIF, and many other popular 
+                        image formats to PNG, ensuring compatibility with your workflow needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: About Page -->
+
+        <!-- @COMPONENT: Contact Page -->
+        <div id="contact-page" class="hidden">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8 text-center" data-mock="true">Contact Us</h1>
+                
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                    <p class="text-gray-600 mb-8 text-center">
+                        Have questions, feedback, or need support? We'd love to hear from you.
+                    </p>
+                    
+                    <form class="space-y-6" data-mock="true" data-implementation="Contact form with validation">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <select id="subject" name="subject" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select a topic</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="business">Business Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                      placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <!-- CAPTCHA Placeholder -->
+                        <div class="bg-gray-100 rounded-lg p-4 border-2 border-dashed border-gray-300" data-mock="true">
+                            <p class="text-gray-600 text-sm text-center">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                CAPTCHA verification will appear here
+                            </p>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors" 
+                                data-event="click:submitContact">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                        <p class="text-gray-600 mb-2">You can also reach us directly at:</p>
+                        <a href="mailto:support@jpg2png-clone.com" 
+                           class="text-primary hover:text-blue-600 font-medium">
+                            support@jpg2png-clone.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: Contact Page -->
+    </main>
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-image text-primary text-2xl mr-3" data-mock="true"></i>
+                        <h3 class="text-xl font-bold">JPG2PNG</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md" data-mock="true">
+                        Free, fast, and secure image conversion. Transform your images to PNG format 
+                        with professional quality and complete privacy protection.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" data-mock="true">Service</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors" data-mock="true">Image Converter</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors" data-mock="true">FAQ</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors" data-mock="true">About</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors" data-mock="true">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" data-mock="true">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#privacy" class="hover:text-white transition-colors" data-mock="true">Privacy Policy</a></li>
+                        <li><a href="#terms" class="hover:text-white transition-colors" data-mock="true">Terms of Service</a></li>
+                        <li><a href="#adsense-info" class="hover:text-white transition-colors" data-mock="true">AdSense Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p data-mock="true">&copy; 2024 JPG2PNG. All rights reserved. Made with ❤️ for the web.</p>
+                <!-- AdSense Placeholder -->
+                <div class="mt-4 p-4 bg-gray-800 rounded-lg border-2 border-dashed border-gray-700" data-mock="true">
+                    <p class="text-sm text-gray-500">
+                        <i class="fas fa-ad mr-2"></i>
+                        Google AdSense ads will appear here after approval
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // TODO: Implement file upload, conversion progress, and result handling
+            // TODO: Add form validation and submission logic
+            // TODO: Implement FAQ toggle functionality
+            // TODO: Add page navigation for SPA-style routing
+            // TODO: Integrate real CAPTCHA (reCAPTCHA v2/v3)
+            // TODO: Add Google Analytics tracking
+            
+            // Simple FAQ toggle demonstration
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('[data-event*="toggleFaq"]')) {
+                    e.preventDefault();
+                    const content = e.target.closest('.bg-white').querySelector('.px-6.pb-4');
+                    const icon = e.target.closest('button').querySelector('i');
+                    
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        content.classList.add('hidden');
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                }
+            });
+            
+            // Simple page navigation demonstration
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('a[href^="#"]')) {
+                    e.preventDefault();
+                    const href = e.target.getAttribute('href');
+                    
+                    // Hide all pages
+                    document.querySelectorAll('[id$="-page"]').forEach(page => {
+                        page.classList.add('hidden');
+                    });
+                    
+                    // Show target page if it exists
+                    const targetPage = document.querySelector(href + '-page');
+                    if (targetPage) {
+                        targetPage.classList.remove('hidden');
+                        document.querySelector('main section').style.display = 'none';
+                    } else {
+                        // Show home sections
+                        document.querySelector('main section').style.display = 'block';
+                    }
+                }
+            });
+            
+            // File input change handler placeholder
+            const fileInput = document.getElementById('fileInput');
+            if (fileInput) {
+                fileInput.addEventListener('change', function(e) {
+                    // TODO: Implement file validation, preview, and upload
+                    console.log('File selected:', e.target.files[0]);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
