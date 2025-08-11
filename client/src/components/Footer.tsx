@@ -67,21 +67,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 PNGConvert. All rights reserved. Made with ❤️ for the web.</p>
-          
-          {/* AdSense Placeholder */}
-          <div className="mt-4 p-4 bg-gray-800 dark:bg-gray-900 rounded-lg border-2 border-dashed border-gray-700 dark:border-gray-600">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              <span className="mr-2">📢</span>
-              Google AdSense ads will appear here after approval
-            </p>
-            <p className="text-xs text-gray-600 dark:text-gray-500 mt-1">
-              Add your AdSense code in the HTML head section
-            </p>
-          </div>
-        </div>
       </div>
     </footer>
   );
